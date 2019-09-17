@@ -1,0 +1,13 @@
+.title{
+    float: left;
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 25px;
+}
+li{
+    font-weight: 600;
+    font-size: 18px;
+}
+.container{
+    background: #8080801f;
+}
