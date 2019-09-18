@@ -18,35 +18,35 @@ class Form extends Component {
         console.log(this.state);
     }
     render() {
-        return(
-        <div className="formList">
-            <form onSubmit={this.handleSubmit} className="formData">
-                <div className="form_title">
-                    <h2>REGISTRATION FORM</h2>
-                </div>
-            <div>
-            <label>Name:</label>
-            <input type="text"  id="name" onChange={this.handleChange}></input>
+        return (
+            <div className="formList">
+                <form onSubmit={this.handleSubmit} className="formData">
+                    <div className="form_title">
+                        <h2>REGISTRATION FORM</h2>
+                    </div>
+                    <div>
+                        <label>Name:</label>
+                        <input type="text" id="name" onChange={this.handleChange}></input>
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <input type="text" id="email" onChange={this.handleChange}></input>
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input type="password" id="password" onChange={this.handleChange}></input>
+                    </div>
+                    <div>
+                        <label>Re-Password:</label>
+                        <input type="password" id="password" onChange={this.handleChange}></input>
+                    </div>
+                    <div>
+                        <label>Phone Number:</label>
+                        <input type="number" id="phone" onChange={this.handleChange}></input>
+                    </div>
+                    <button className="button">Submit</button>
+                </form>
             </div>
-            <div>
-            <label>Email:</label>
-            <input type="text"  id="email" onChange={this.handleChange}></input>
-            </div>
-            <div>
-            <label>Password:</label>
-            <input type="password" id="password" onChange={this.handleChange}></input>
-            </div>
-            <div>
-            <label>Re-Password:</label>
-            <input type="password" id="password" onChange={this.handleChange}></input>
-            </div>
-            <div>
-            <label>Phone Number:</label>
-            <input type="number"  id="phone" onChange={this.handleChange}></input>
-            </div>
-            <button className="button">Submit</button>
-            </form>
-        </div>
         );
     }
 }

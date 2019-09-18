@@ -45,12 +45,12 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar className="col-lg-4"/>
+          <Navbar className="col-lg-4" />
           <Switch>
-          <Route path="/home" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/posts/:post_id" component={Post} />
+            <Route path="/home" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/posts/:post_id" component={Post} />
           </Switch>
           <div className="todo-app">
             <h1 className="center blue-text">Todo's List</h1>
