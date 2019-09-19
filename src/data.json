@@ -1,0 +1,27 @@
+[
+    {
+        "assetClass": "Cash and Short Term Fixed Income",
+        "currentValue": 100527.61,
+        "currentPercent": 5.40
+    },
+    {
+        "assetClass": "Fixed Income",
+        "currentValue": 385773.45,
+        "currentPercent": 20.72
+    },
+    {
+        "assetClass": "International Equity",
+        "currentValue": 236582.42,
+        "currentPercent": 12.71
+    },
+    {
+        "assetClass": "US Equity",
+        "currentValue": 997646.18,
+        "currentPercent": 53.58
+    },
+    {
+        "assetClass": "Alternative Investments",
+        "currentValue": 141399.59,
+        "currentPercent": 7.59
+    }
+]

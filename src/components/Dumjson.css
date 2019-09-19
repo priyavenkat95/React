@@ -1,0 +1,29 @@
+.jsonCard{
+    margin: auto;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.tableData{
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+td, th{
+    text-align: -webkit-auto;
+}
+.data{
+    padding: 5px;
+}
+h2{
+    float: left;
+    margin-left: 10px;
+}
+.overalljson{
+    padding-top: 10px;
+}
+.timer-card{
+    margin-left: 1%;
+    margin-right: 1%; 
+}

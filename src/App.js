@@ -9,6 +9,8 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import Post from './components/Post';
+import Dumjson from './components/Dumjson';
+
 class App extends Component {
 
   state = {
@@ -50,13 +52,17 @@ class App extends Component {
             <Route path="/home" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="/json" component={Dumjson} />
             <Route path="/posts/:post_id" component={Post} />
-          </Switch>
-          <div className="todo-app">
-            <h1 className="center blue-text">Todo's List</h1>
+            </Switch>
+          <div className="card todo-app">
+            <h3 className="todohead">Todo's List</h3>
+            <div>
             <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
             <AddTodo addTodo={this.addTodo} />
+            </div>
           </div>
+          
         </div>
       </BrowserRouter>
     );
