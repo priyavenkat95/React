@@ -2,37 +2,38 @@
 import React, { Component } from 'react';
 import './Home.css';
 import './Timer.css';
-const textArray = ['eat', 'sleep', 'drink', 'snore', 'foo', 'buzz', 'whatever'];
-
+import Timercard from '../hoc/Timercard';
+const nameText = [];
 class Timer extends Component {
-  constructor() {
-    super();
-    this.state = { textIdx: 0 };
+  constructor(props) {
+    super(props);
   }
-
   componentDidMount() {
-    this.timeout = setInterval(() => {
-      let currentIdx = this.state.textIdx;
-      this.setState({ textIdx: currentIdx + 1 });
-    }, 1500);
+    console.log(this.props);
   }
-
-  componentDidUnmount() {
-    clearInterval(this.timeout);
-  }
-
   render() {
-    let textThatChanges = textArray[this.state.textIdx % textArray.length];
-    console.log(textThatChanges.length);
+    nameText.push(this.props.name)
+    console.log(nameText);
+    const postList = nameText.length ? (
+      nameText.map((post, i) => {
+        //  post.filter((item) =>{
+          return (
+            <div className="card dynamic-card"  key={i}>
+              <h5>Hey {post}! Good morning</h5>
+            </div>
+          )
+        // });
+
+      })
+    ) : (
+        <div>No data</div>
+      )
     return (
-      <section>
-        <h1>Hello, my name is Barry Allen</h1>
-        <div className="card dynaTxt">
-        <p className="red-text">I like to <span>{textThatChanges}</span></p>
-        </div>
-      </section>
+      <div>
+        {postList}
+      </div>
     )
   }
 }
 
-export default Timer;
+export default Timercard(Timer);

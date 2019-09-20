@@ -4,3 +4,7 @@
     background: antiquewhite;
     border: 3px solid #C62828;
 }
+.dynamic-card{
+    padding: 1%;
+    border-left: 8px solid #C62828;
+}
