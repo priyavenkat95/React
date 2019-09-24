@@ -10,7 +10,8 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Post from './components/Post';
 import Dumjson from './components/Dumjson';
-
+import SuccessData from './components/SuccessData';
+import ValidatedLoginForm from './components/ValidatedLoginForm';
 class App extends Component {
 
   state = {
@@ -51,10 +52,15 @@ class App extends Component {
           <Switch>
             <Route path="/home" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/login" component={ValidatedLoginForm} />
             <Route path="/json" component={Dumjson} />
             <Route path="/posts/:post_id" component={Post} />
-            </Switch>
+            <Route path="/view" component={SuccessData} />
+          </Switch>
+          {/* <div>
+            <h1>Validated Login Form</h1>
+            <ValidatedLoginForm />
+          </div> */}
           <div className="card todo-app">
             <h3 className="todohead">Todo's List</h3>
             <div>
@@ -62,7 +68,7 @@ class App extends Component {
             <AddTodo addTodo={this.addTodo} />
             </div>
           </div>
-          
+
         </div>
       </BrowserRouter>
     );

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import data from "../../src/data.json";
 import './Dumjson.css';
 import Timer from '../components/Timer';
+
 class Dumjson extends Component {
     constructor() {
         super();

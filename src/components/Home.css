@@ -5,7 +5,8 @@
     padding: 25px;
     border-radius: 15px;
     padding: 10px;
-    border: 4px solid #C62828;
+    width: 100%;
+    /* border: 4px solid #C62828; */
 }
 .logo_image{
     width: 5%;
