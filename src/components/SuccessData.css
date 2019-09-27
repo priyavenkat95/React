@@ -1,0 +1,36 @@
+.arrDatas{
+    border-top: 8px solid green !important;
+    height: 140px;
+}
+.name{
+    margin: auto;
+}
+.rowData{
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+svg.MuiSvgIcon-root.deleteIcon {
+    float: right;
+    color: #8080808f;
+    margin-top: 4px;
+    cursor: pointer;
+}
+svg.MuiSvgIcon-root.editIcon{
+    float: right;
+    color: #8080808f;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.applybtn{
+    background-color: #C62828 !important;
+    color: white;
+    width: 15%;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+.status{
+    color: #C62828 !important;
+}

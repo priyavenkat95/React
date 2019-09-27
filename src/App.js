@@ -29,6 +29,7 @@ class App extends Component {
     this.setState({
       todos
     })
+    console.log(todos);
   }
   addTodo = (todo) => {
     todo.id = Math.random();

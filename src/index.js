@@ -5,6 +5,7 @@ import './index.css';
 import {createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/rootReducer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 const store = createStore(rootReducer);
 
 ReactDOM.render(

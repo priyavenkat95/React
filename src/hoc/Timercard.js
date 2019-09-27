@@ -10,14 +10,16 @@ const TimerCard = (WrappedComponent) => {
             super(props);
             this.state = { textIdx: 0 };
         }
-
+        deleteData() {
+            console.log("deleted the values");
+        }
         componentDidMount() {
             this.timeout = setInterval(() => {
                 let currentIdx = this.state.textIdx;
                 this.setState({ textIdx: currentIdx + 1 });
             }, 1500);
         }
-        componentDidUnmount() {
+        componentWillUnmount() {
             clearInterval(this.timeout);
         }
 

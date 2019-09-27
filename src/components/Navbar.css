@@ -11,3 +11,7 @@ li{
 .container{
     background: #8080801f;
 }
+a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
