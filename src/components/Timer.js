@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import './Home.css';
 import './Timer.css';
-import Timercard from '../hoc/Timercard';
 import { PacmanLoader } from 'react-spinners';
 import { css } from '@emotion/core';
 import SuccessData from './SuccessData';
@@ -19,7 +18,8 @@ class Timer extends Component {
     this.state = {
       isloading: true,
       show: false,
-      arr_datas: []
+      textArray: ['Alex', 'Camran', 'Bruce', 'Nix', 'Aleo', 'Rano', 'Lilee'],
+      textIdx: 0,
     }
   }
   showTable = () => {
@@ -27,16 +27,44 @@ class Timer extends Component {
       show: true
     });
   }
+  componentDidMount() {
+    this.timeout = setInterval(() => {
+        let currentIdx = this.state.textIdx;
+        this.setState({ textIdx: currentIdx + 1 });
+    }, 1500);
+}
+componentWillUnmount() {
+    clearInterval(this.timeout);
+}
+deletedatas = (post_arr,i) => {
+/*   console.log("deleted", post_arr.indexOf());
+  console.log(i);
+  console.log(post_arr)
+      if (post_arr.indexOf() !== i){
+      console.log(post_arr);
+      post_arr = post_arr.splice(i,1);
+          console.log(post_arr);
+      } */
+      if(this.name && this.name.length > 0){
+        this.name = this.name.splice(i,1);
+        const data = [];
+        data = this.name;
+        this.setState({
+          textArray: data
+        })
+      }
+      console.log(this.name,post_arr)
+      
+}
   render() {
-    const arr_datas = [...this.state.arr_datas];
-    nameText.push(this.props.name);
+    let textThatChanges = this.state.textArray[this.state.textIdx % this.state.textArray.length];
+    nameText.push(textThatChanges);
     const uniqueNames = nameText.filter((val, id) => {
       return nameText.indexOf(val) == id;
     });
-    arr_datas.push(uniqueNames);
     const postList = uniqueNames.length ? (
-      <div>
-        {this.state.show == true ? (<SuccessData name={uniqueNames} deleteData={this.deleteData}></SuccessData>) : (
+      <div >
+        {this.state.show == true ? (<SuccessData {...this.props} name={uniqueNames} deleteData={this.deletedatas}></SuccessData>) : (
           uniqueNames.map((post, i) => {
             return (
               <div key={i}>
@@ -60,22 +88,20 @@ class Timer extends Component {
                   <button className="success-data" onClick={this.showTable}>Hurray!!! Completed</button>
                 </div> : null}
               </div>
-
             )
           })
         )}
       </div>
-
-
     ) : (
         <div>No data</div>
       )
     return (
       <div>
         {postList}
+
       </div>
     )
   }
 }
 
-export default Timercard(Timer);
+export default Timer;

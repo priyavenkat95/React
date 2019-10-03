@@ -9,18 +9,17 @@ class SuccessData extends Component {
             showResults: false
         }
     }
-    deletedata = () => {
-        console.log("deleted");
-        let arrayData = this.props.name;
-        arrayData = arrayData.filter((val, id) => {
-            console.log(arrayData.indexOf(val));
-            console.log(id);
-            if (arrayData.indexOf(val) === id)
-                delete arrayData[arrayData.indexOf(val)];
-        });
-    }
-    showdata = (e) => {
-        console.log(e.target.value);
+    // deletedata = () => {
+    //     console.log("deleted");
+    //     let arrayData = this.props.name;
+    //     arrayData = arrayData.filter((val, id) => {
+    //         console.log(arrayData.indexOf(val));
+    //         console.log(id);
+    //         if (arrayData.indexOf(val) === id)
+    //             delete arrayData[arrayData.indexOf(val)];
+    //     });
+    // }
+    showdata = () => {
         this.setState({
             showResults: true,
         });
@@ -38,7 +37,7 @@ class SuccessData extends Component {
                             <div className="card arrDatas col-lg-4" key={i}>
                                 <div>
                                     <EditIcon className="editIcon" />
-                                    <DeleteIcon className="deleteIcon" onClick={this.deletedata} />
+                                    <DeleteIcon className="deleteIcon" onClick={() => this.props.deleteData(post_arr,i)}/>
                                 </div>
                                 <h3 className="name">Name : <i>{post_arr}</i></h3>
                                 {this.state.showResults === true && (<p><i>Job Name <span className="status">{post_arr}</span> applied successfully!!</i></p>)}
